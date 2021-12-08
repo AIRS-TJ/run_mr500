@@ -17,13 +17,18 @@ wifi名：Terra_MR500;密码：terra123
     
 密码是1
 
-进入主控后再：$ vnc
+进入主控后：
 
-注意：要让主控的屏幕显示，vnc命令才能成功
+    $  vnc
+
+（注意：要让主控的屏幕显示，vnc命令才能成功）
 
 主控打开vnc后，再打开我电脑端或者手机端的vnc软件与mr500主控连接
+
 192.168.1.102::12099
+
 或者
+
 192.168.1.102::12098
 
 ## 2. 运行
@@ -65,7 +70,9 @@ mr500的密码是：1
 
     $ roslaunch nmea_navsat_driver other.launch
     $ roslaunch nmea_navsat_driver demo.launch
+    
 或者
+
     $ cd ~/j_ws/src/run_mr500/
     $ sudo chmod 777 run.sh
     $ ./run.sh
