@@ -1,0 +1,23 @@
+<!--mr-->
+<launch>
+
+    <!-- load robot model -->
+    <include file="$(find mr500_description)/launch/mr500model.launch"/>
+
+    <!-- The parameters used for mapping and navigation are inconsistent. so they are transferred to their respective launch files -->
+    <!--include file="$(find robot_pose_ekf)/launch/robot_pose_ekf.launch"/-->
+
+    <node pkg="robuster_mr_bringup" type="robuster_serial_node" name="serial_node" output="screen">
+        <param name="odom_frame" value="odom"/>
+        <param name="base_link_frame" value="base_link"/>
+        <param name="imu_link_frame" value="imu_link"/>
+        <param name="tfUsed" value="0"/>
+
+        <param name="wheelSpace" value="0.38" />
+        <param name="wheelDiam" value="0.22" />
+        <param name="wheelRate" value="20.0" />
+	<remap from="smooth_cmd_vel" to="cmd_vel" />
+    </node>
+
+</launch>
+

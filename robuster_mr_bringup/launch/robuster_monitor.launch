@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find robuster_mr_gui)/launch/rosbridge.launch"/>
+  <include file="$(find robuster_mr_control)/launch/websocket_base.launch"/>
+  <!-- Start robuster service monitor process -->
+  <node name="robuster_service_monitor" pkg="robuster_mr_bringup" type="daemon_services.py" output="screen"/>
+
+</launch>
+
+
+
+

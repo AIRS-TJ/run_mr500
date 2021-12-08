@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="odom_frame" default="odom"/>
+    <arg name="base_frame" default="base_link"/>
+
+    <!-- load robot model -->
+    <include file="$(find mr2000_description)/launch/mr2000model.launch"/>
+
+    <node pkg="robuster_mr_bringup" type="robuster_serial_node" name="robuster_serial_node" output="screen" >
+        <param name="port" value="/dev/ttyS0" />
+        <param name="baud_rate" value="115200" />
+        <param name="control_rate" value="25" />
+
+        <param name="odom_frame" value="$(arg odom_frame)" />
+        <param name="base_frame" value="$(arg base_frame)" />
+    </node>
+
+</launch>
+
+
+
+

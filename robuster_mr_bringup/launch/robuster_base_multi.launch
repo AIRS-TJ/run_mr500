@@ -1,0 +1,16 @@
+<!--mr-->
+<launch>
+    <arg name="base"              default="$(env ROBUSTER_BASE)" />
+    <arg name="namespace"         default="$(optenv ROBUSTER_NS robuster)"/>
+    
+    <group ns="$(arg namespace)">
+        <include file="$(find robuster_mr_bringup)/launch/$(arg base)_bringup.launch">
+            <arg name="odom_frame" value="$(arg namespace)/odom" />
+            <arg name="base_frame" value="$(arg namespace)/base_link" />
+        </include>
+
+        <include file="$(find yocs_velocity_smoother)/launch/standalone.launch"/>
+    </group>
+    
+</launch>
+

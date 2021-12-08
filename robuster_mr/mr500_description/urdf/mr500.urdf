@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mr500_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0074607 0.0002745 0.090874"
+        rpy="0 0 0" />
+      <mass
+        value="14.255" />
+      <inertia
+        ixx="0.074782"
+        ixy="-0.0027052"
+        ixz="-0.00045988"
+        iyy="0.13178"
+        iyz="-1.7679E-05"
+        izz="0.17846" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.061"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="3.17E-05 -0.01085 -6.2432E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.2687" />
+      <inertia
+        ixx="0.0031792"
+        ixy="2.1349E-07"
+        ixz="-6.6917E-07"
+        iyy="0.0057572"
+        iyz="-6.522E-07"
+        izz="0.0031824" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JL1"
+    type="continuous">
+    <origin
+      xyz="0.13022 0.20389 0.1"
+      rpy="0 0 0.047333" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="6.8291E-05 -0.01085 1.5457E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.2687" />
+      <inertia
+        ixx="0.0031826"
+        ixy="6.8461E-07"
+        ixz="-1.7379E-07"
+        iyy="0.0057572"
+        iyz="4.7381E-08"
+        izz="0.0031791" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JL2"
+    type="continuous">
+    <origin
+      xyz="-0.12949 0.19159 0.1"
+      rpy="0 0 0.047333" />
+    <parent
+      link="base_link" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="R1">
+    <inertial>
+      <origin
+        xyz="-6.7364E-05 -0.010648 1.4429E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.2687" />
+      <inertia
+        ixx="0.0031823"
+        ixy="6.2693E-07"
+        ixz="-7.7345E-07"
+        iyy="0.0057572"
+        iyz="-1.6114E-07"
+        izz="0.0031793" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JR1"
+    type="continuous">
+    <origin
+      xyz="0.14891 -0.19067 0.1"
+      rpy="-3.1416 0 0.047333" />
+    <parent
+      link="base_link" />
+    <child
+      link="R1" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="R2">
+    <inertial>
+      <origin
+        xyz="-6.7653E-05 -0.010648 -1.3009E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.2687" />
+      <inertia
+        ixx="0.0031824"
+        ixy="6.401E-07"
+        ixz="5.597E-07"
+        iyy="0.0057572"
+        iyz="9.6349E-08"
+        izz="0.0031792" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mr500_description/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JR2"
+    type="continuous">
+    <origin
+      xyz="-0.1108 -0.20297 0.1"
+      rpy="-3.1416 0 0.047333" />
+    <parent
+      link="base_link" />
+    <child
+      link="R2" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <link 
+    name="imu_link">
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.0 0.0 0.246"
+      rpy="0.0 0.0 0.0"/>
+    <parent
+      link="base_link"/>
+    <child
+      link="imu_link"/>
+  </joint>
+</robot>

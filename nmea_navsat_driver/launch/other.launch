@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find xsens_driver)/launch/xsens_driver.launch" />
+  <include file="$(find robuster_mr_bringup)/launch/mr500_bringup.launch" />
+  <include file="$(find rslidar_pointcloud)/launch/rs_lidar_16.launch" />
+
+</launch>
+

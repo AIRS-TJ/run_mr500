@@ -1,0 +1,18 @@
+[Unit]
+Description=mapping launcher
+After=roscore.service
+PartOf=roscore.service
+
+[Service]
+User=robuster
+Type=simple
+KillMode=process
+TimeoutStopSec=1
+KillSignal=SIGTERM
+ExecStartPre=/bin/systemctl is-active roscore
+ExecStart=/usr/local/share/monitor/ros_wrapper.sh roslaunch robuster_mr_navigation mapping.launch
+Restart=always
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target

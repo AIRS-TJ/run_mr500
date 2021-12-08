@@ -1,0 +1,5 @@
+<launch>
+  <node name="nmea_serial_driver" pkg="nmea_navsat_driver" type="nmea_serial_driver" args="_port:=/dev/ttyUSB1 _baund:=4800" output="screen" /> 
+
+</launch>
+

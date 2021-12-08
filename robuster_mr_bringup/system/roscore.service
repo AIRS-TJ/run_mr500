@@ -1,0 +1,18 @@
+[Unit]
+Description=roscore launcher
+After=network-online.target
+Requires=network-online.target
+Wants=robuster_monitor.service 
+Before=robuster_monitor.service 
+
+[Service]
+User=robuster
+Type=simple
+LimitCORE=1024000
+ExecStartPre=/bin/systemctl is-active network-online.target
+ExecStart=/usr/local/share/monitor/ros_wrapper.sh roscore
+Restart=always
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target

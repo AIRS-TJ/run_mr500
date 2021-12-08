@@ -1,0 +1,10 @@
+<!--mr-->
+<launch>
+    <arg name="base"              default="mr500" />
+
+    <include file="$(find robuster_mr_bringup)/launch/$(arg base)_bringup.launch"/>
+
+    <!--include file="$(find yocs_velocity_smoother)/launch/standalone.launch"/-->
+    
+</launch>
+

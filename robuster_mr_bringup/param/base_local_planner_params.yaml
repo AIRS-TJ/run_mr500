@@ -1,0 +1,46 @@
+controller_frequency: 5.0           #7.0
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
+
+TrajectoryPlannerROS:
+  max_vel_x: 0.4
+  min_vel_x: 0.1
+  max_vel_y: 0.0   # zero for a differential drive robot
+  min_vel_y: 0.0
+  max_vel_theta: 0.4  #2.0
+  min_vel_theta: 0.1  #0.5
+  min_in_place_vel_theta: 0.1
+  min_in_place_rotational_vel: 0.5
+  escape_vel: -0.10
+  acc_lim_x: 0.05 #0.75
+  acc_lim_y: 0.0   # zero for a differential drive robot
+  acc_lim_theta: 0.05  #1.0
+  max_rot_vel: 5.0  #5.0   # choose slightly less than the base's capability 5.0
+  min_rot_vel: 0.15  #0.15  # this is the min angular velocity when there is negligible translational velocity
+  rot_stopped_vel: 0.2
+
+  holonomic_robot: false
+  yaw_goal_tolerance: 0.1 #0.1 about 11 degrees
+  xy_goal_tolerance: 0.1 # 10 cm
+  gdist_scale: 0.8
+  pdist_scale: 0.4
+
+  heading_lookahead: 0.325   #0.3
+  heading_scoring: false
+  heading_scoring_timestep: 0.1
+  meter_scoring: true
+  oscillation_reset_dist: 0.05
+  occdist_scale: 0.1
+  publish_cost_grid_pc: false
+
+  sim_time: 1.0    #1.0
+  sim_granularity: 0.025
+  angular_sim_granularity: 0.025
+  vx_samples: 8
+  vy_samples: 0   # zero for a differential drive robot
+  vtheta_samples: 20
+  dwa: true
+  simple_attractor: false
+#GlobalLCXPoint: [[6.77,-0.253,1,0], [2.94,-0.45,1,0], [-0.107,1.56,1,0], [-4.61,-0.393,1,0], [-13.4,-0.377,0,1], [-1.2,-0.457,0.707,0.707]]
+#GlobalLCXPoint: [[4.6,-0.03,1,0], [0.53,-0.03,1,0], [-3.69,-0.03,0.707,-0.707], [-3.69,-4.4,0,1], [0.53,-4.4,0.707,0.707], [0.53,-2.4,0,1], [4.6,-2.42,0.707,0.707]]
+GlobalLCXPoint: [[-5.16,-3.33,1,0], [2.18,-8.72,1,0], [-2.83,-6.38,0,1]]
