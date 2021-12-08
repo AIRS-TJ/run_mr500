@@ -29,8 +29,8 @@ mr500的密码是：1
     $ cd j_ws/
     $ catkin_make
 
-### 2.2.打开imu
-$ roslaunch xsens_driver xsens_driver.launch
+### 2.2.imu
+    $ roslaunch xsens_driver xsens_driver.launch
 
 ### 2.3.打开多线雷达
 
@@ -53,7 +53,7 @@ $ roslaunch xsens_driver xsens_driver.launch
     $ rosrun ekf_odom ekf_odom
 
 ## 3.GPS实验
-###3.1.打开gps
+### 3.1.打开gps
     $ rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/ttyUSB1 _baund:=4800
     
 ### 3.1.户外gps实验简化运行
